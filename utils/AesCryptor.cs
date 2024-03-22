@@ -68,21 +68,18 @@ namespace utils
 
         }
 
-        public static string crack(byte[] cipherToCrack, byte[] iv, out byte[] key)
+        public static string crack(byte[] cipherToCrack, byte[] iv, ref byte[] key)
         {
+            key[2]++;
             m_Aes.IV = iv;
             string clearText = "unknown";
             // key --> 16 bytes, bytes 3...15 = 0
-            key = new byte[16];
-            for (int a = 0; a <= 255; a++)
+            do
             {
-                key[0] = (byte)a;
-                for (int b = 0; b <= 255; b++)
+                do
                 {
-                    key[1] = (byte)b;
-                    for (int c = 0; c <= 255; c++)
-                    {
-                        key[2] = (byte)c;
+                     do
+                     {
                         m_Aes.Key = key;
                         ICryptoTransform decryptor = m_Aes.CreateDecryptor();
                         try
@@ -107,18 +104,20 @@ namespace utils
                         {
 
                         }
-                    }
-                }
-
-            }
+                        key[2]++;
+                    } while (key[2] > 0);
+                    key[1]++;
+                } while (key[1] > 0);
+                key[0]++;
+            } while (key[0] > 0);
             return "cleartext not found";
         }
 
         private static bool isPrintable(string s)
         {
-            for (int i=0; i<s.Length; i++) 
+            for (int i = 0; i < s.Length; i++)
             {
-                if (Char.IsControl(s, i))
+                if (Char.IsControl(s[i]))   
                     return false;
             }
             return true;
