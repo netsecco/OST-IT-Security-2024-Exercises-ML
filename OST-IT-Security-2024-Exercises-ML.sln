@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASYM-SM", "ASYM-SM\ASYM-SM.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASYM-DH", "ASYM-DH\ASYM-DH.csproj", "{F3E15B80-5593-46CC-B666-800CBB8E5ED8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blockchain", "Blockchain\Blockchain.csproj", "{7D5DE0B7-941F-4BF9-BC85-7959506762A8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoCurrency", "CryptoCurrency\CryptoCurrency.csproj", "{049BCC32-84C8-4803-9388-47FF427B1B72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,14 @@ Global
 		{F3E15B80-5593-46CC-B666-800CBB8E5ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3E15B80-5593-46CC-B666-800CBB8E5ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3E15B80-5593-46CC-B666-800CBB8E5ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5DE0B7-941F-4BF9-BC85-7959506762A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5DE0B7-941F-4BF9-BC85-7959506762A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5DE0B7-941F-4BF9-BC85-7959506762A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5DE0B7-941F-4BF9-BC85-7959506762A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{049BCC32-84C8-4803-9388-47FF427B1B72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{049BCC32-84C8-4803-9388-47FF427B1B72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{049BCC32-84C8-4803-9388-47FF427B1B72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{049BCC32-84C8-4803-9388-47FF427B1B72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
